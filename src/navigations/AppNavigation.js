@@ -1,11 +1,11 @@
 import React from 'react';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import { View, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import LoginStack from './LoginStack';
+import SignInStack from './SignInStack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DrawerContent from './DrawerContent';
 import HomeScreen from '../screens/HomeScreen';
-import RankingScreen from '../screens/HomeScreen';
+import RankingScreen from '../screens/RankingScreen';
 
 const DrawerNavigation = DrawerNavigator(
   {
@@ -31,13 +31,27 @@ const MainStack = StackNavigator(
             navigator.navigation.toggleDrawer();
           }}
         >
-          <Icon name="bars" size={20} color="#aaa" style={{ marginLeft: 15 }} />
+          <Icon
+            name="bars"
+            size={20}
+            color="#aaa"
+            style={styles.headerLeftIconStyle}
+          />
         </TouchableOpacity>
       ),
       headerTitle: (
         <View style={styles.searchInputContainer}>
-          <Icon name="search" size={20} color="#aaa" style={{ padding: 5 }} />
-          <TextInput style={styles.searchInputStyle} underlineColorAndroid="transparent" placeholder="search" />
+          <Icon
+            name="search"
+            size={20}
+            color="#aaa"
+            style={styles.searchInputIconStyle}
+          />
+          <TextInput
+            style={styles.searchInputStyle}
+            underlineColorAndroid="transparent"
+            placeholder="search"
+          />
         </View>
       ),
       drawerLockMode: 'locked-open',
@@ -47,6 +61,7 @@ const MainStack = StackNavigator(
 
 const RootStackNavigator = StackNavigator(
   {
+    SignInStack: { screen: SignInStack },
     MainStack: { screen: MainStack },
   },
   {
@@ -55,6 +70,9 @@ const RootStackNavigator = StackNavigator(
 );
 
 const styles = StyleSheet.create({
+  headerLeftIconStyle: {
+    marginLeft: 15,
+  },
   searchInputContainer: {
     flex: 1,
     borderWidth: 1,
@@ -62,6 +80,9 @@ const styles = StyleSheet.create({
     borderColor: '#999',
     flexDirection: 'row',
     backgroundColor: 'white',
+  },
+  searchInputIconStyle: {
+    padding: 5,
   },
   searchInputStyle: {
     flex: 1,

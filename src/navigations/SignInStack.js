@@ -8,9 +8,7 @@ export default createStackNavigator(
   {
     headerMode: 'float',
     navigationOptions: _ => ({
-      headerStyle: { backgroundColor: '#E73536' },
-      title: 'You are not logged in',
-      headerTintColor: 'white',
+      title: 'Welcome',
     }),
   }
 );

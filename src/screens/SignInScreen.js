@@ -1,24 +1,25 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { View, Button } from 'react-navigation';
+import React, { Component } from 'react';
+import { View, Button, Text } from 'react-native';
 
-export default () => {
-  return (
-    <View style={styles.containerStyle}>
-      <Button
-        title="Sign in"
-        onPress={() => {
-          this.props.navigation.navigate('DrawerStack');
+export default class SignInScreen extends Component {
+  render() {
+    return (
+      <View
+        style={{
+          backgroundColor: '#eee',
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'center',
         }}
-      />
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  containerStyle: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-});
+      >
+        <Text style={{ textAlign: 'center' }}>Home Content</Text>
+        <Button
+          title="Sign in"
+          onPress={() => {
+            this.props.navigation.navigate('MainStack');
+          }}
+        />
+      </View>
+    );
+  }
+}

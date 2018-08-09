@@ -7,7 +7,7 @@ class DrawerContent extends Component {
   state = {
     channels: [
       { screen: 'HomeScreen', title: 'Home', icon: 'home' },
-      { screen: 'HomeScreen', title: 'Ranking', icon: 'list-ordered' },
+      { screen: 'RankingScreen', title: 'Ranking', icon: 'list-ordered' },
     ],
   };
 
