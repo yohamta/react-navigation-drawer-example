@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 export default class ChannelScreen extends Component {
-  static navigationOptions = {
-    headerTitle: 'Channel',
-  };
-
   render() {
     return (
-      <View>
+      <View style={{backgroundColor: '#eee', flex: 1}}>
         <Text>Hello</Text>
       </View>
     );
