@@ -16,17 +16,19 @@ class DrawerContent extends Component {
   };
 
   renderChannelButtons() {
-    return this.state.channels.map(({ channelName }) => {
+    return this.state.channels.map(({ channelName }) => (
       <TouchableOpacity onPress={this.navigateToScreen(channelName)}>
-        <Text>channelName</Text>
-      </TouchableOpacity>;
-    });
+        <Text>{channelName}</Text>
+      </TouchableOpacity>
+    ));
   }
 
   render() {
     return (
       <View style={styles.containerStyle}>
-        <ScrollView>{this.renderChannelButtons()}</ScrollView>
+        <ScrollView>
+          {this.renderChannelButtons()}
+        </ScrollView>
       </View>
     );
   }

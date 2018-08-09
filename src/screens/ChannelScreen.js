@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Animated, Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default class ChannelScreen extends Component {
   static navigationOptions = {
@@ -8,9 +8,9 @@ export default class ChannelScreen extends Component {
 
   render() {
     return (
-      <Animated.View style={{ opacity: fadeAnim }}>
+      <View>
         <Text>Hello</Text>
-      </Animated.View>
+      </View>
     );
   }
 }

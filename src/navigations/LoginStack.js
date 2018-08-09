@@ -1,9 +1,9 @@
 import { createStackNavigator } from 'react-navigation';
-import LoginScreen from '../screens/LoginScreen';
+import SignInScreen from '../screens/SignInScreen';
 
 export default createStackNavigator(
   {
-    LoginScreen: { screen: LoginScreen },
+    SignInScreen: { screen: SignInScreen },
   },
   {
     headerMode: 'float',
