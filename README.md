@@ -14,7 +14,7 @@ $ yarn install
 $ yarn start
 ```
 
-## Start simulator
+Then, start simulator with this command.
 
 ```sh
 $ react-native run-ios
