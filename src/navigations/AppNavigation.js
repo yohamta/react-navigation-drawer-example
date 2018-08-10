@@ -59,6 +59,20 @@ const MainStack = StackNavigator(
   }
 );
 
+let TransitionConfig = () => {
+  return {
+    screenInterpolator: ({ position, scene }) => {
+      const opacity = position.interpolate({
+        inputRange: [scene.index - 1, scene.index],
+        outputRange: [0, 1],
+      });
+      return {
+        opacity: opacity,
+      };
+    },
+  };
+};
+
 const RootStackNavigator = StackNavigator(
   {
     SignInStack: { screen: SignInStack },
@@ -66,6 +80,7 @@ const RootStackNavigator = StackNavigator(
   },
   {
     headerMode: 'none',
+    transitionConfig: TransitionConfig,
   }
 );
 

@@ -5,7 +5,7 @@ export default class ChannelScreen extends Component {
   render() {
     return (
       <View style={{backgroundColor: '#eee', flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
-        <Text style={{textAlign: 'center'}}>Home Content</Text>
+        <Text style={{textAlign: 'center'}}>Home</Text>
       </View>
     );
   }
